@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# update the system
+apt update -y
+apt upgrade -y
+
+# install these packages
+apt install -y python3 git nginx
+
+# make sure nginx starts (just to be safe)
+systemctl enable nginx
+systemctl start nginx
